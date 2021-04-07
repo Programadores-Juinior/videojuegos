@@ -35,6 +35,7 @@ public class VideoJuegosService {
         juego.setImagenUrl("https://store-images.s-microsoft.com/image/apps.31281.64256825846959382.44b5bc43-437a-4414-83ca-b41ba9e7764a.86abb8aa-f419-4a90-b6aa-cf79b4228f06");
         destacados.add(juego);
 
+
         return destacados;
     }
 
