@@ -15,7 +15,7 @@
 <body>
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Tienda
-        <img src="../static/img/logo.png" width="30"
+        <img src="img/logo.png" width="30"
              height="24" alt="">
     </a>
 
@@ -25,12 +25,11 @@
 
         <div class="col-md-3 mb-4" th:each="juego : ${videojuego}" >
             <div class="card">
-                <img src="https://store-images.s-microsoft.com/image/apps.29324.71029176982638972.07f274c3-060d-4786-b7b2-69156454002c.8b96fcc3-c9bd-4c79-a956-a9bd3ef02895"
+                <img th:src="${juego.imagenUrl}"
                      class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Borderlands 3</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <h5 class="card-title"th:text="${juego.nombre}"> </h5>
+                    <p class="card-text" th:text="${juego.descripcion}"></p>
                     <a href="#" class="btn btn-primary">Ver detalles</a>
                 </div>
             </div>
