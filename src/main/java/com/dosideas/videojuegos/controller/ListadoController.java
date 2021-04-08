@@ -25,4 +25,11 @@ public class ListadoController {
         return "Listado";
     }
 
+    @RequestMapping("/videojuegosPorDistribuidor")
+    public String listarVideojuegosPorDistribuidor(int distribuidorId ,Model model){
+    List<Videojuego> juegos = videoJuegosService.buscarPorDistribuidor(distribuidorId);
+    model.addAttribute("videojuego",juegos);
+    return "Listado";
+    }
+
 }
