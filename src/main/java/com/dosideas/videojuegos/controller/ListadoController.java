@@ -5,6 +5,8 @@ import com.dosideas.videojuegos.domain.Videojuego;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.List;
 
 @Controller
@@ -30,6 +32,13 @@ public class ListadoController {
     List<Videojuego> juegos = videoJuegosService.buscarPorDistribuidor(distribuidorId);
     model.addAttribute("videojuego",juegos);
     return "Listado";
+    }
+
+    @RequestMapping("/buscar")
+    public String buscar(@RequestParam ("q") String consulta , Model model){
+        List<Videojuego> juegos = videoJuegosService.buscar(consulta);
+        model.addAttribute("videojuego",juegos);
+        return "Listado";
     }
 
 }
