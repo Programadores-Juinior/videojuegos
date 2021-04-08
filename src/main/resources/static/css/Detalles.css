@@ -1,0 +1,7 @@
+.vj-destacados .card img {
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+}.vj-destacados .card {
+    height: 100%;
+ }

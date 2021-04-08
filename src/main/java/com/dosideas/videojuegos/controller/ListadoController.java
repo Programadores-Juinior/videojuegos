@@ -1,7 +1,7 @@
 package com.dosideas.videojuegos.controller;
 
-import com.dosideas.videojuegos.Service.VideoJuegosService;
-import com.dosideas.videojuegos.domain.videojuego;
+import com.dosideas.videojuegos.service.VideoJuegosService;
+import com.dosideas.videojuegos.domain.Videojuego;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +20,7 @@ public class ListadoController {
     @RequestMapping("/")
     public  String listarVideojuegos(Model model){
         //busqueda de los videojuegos
-        List<videojuego> destacados = videoJuegosService.buscarDestacados();
+        List<Videojuego> destacados = videoJuegosService.buscarDestacados();
         model.addAttribute("videojuego",destacados);
         return "Listado";
     }
