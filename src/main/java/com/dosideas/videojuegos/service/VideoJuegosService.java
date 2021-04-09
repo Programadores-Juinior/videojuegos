@@ -26,4 +26,8 @@ public class VideoJuegosService {
         return videojuegoRepository.findByNombreContaining(consulta);
     }
 
+    public Videojuego guardar (Videojuego videojuego){
+        return videojuegoRepository.save(videojuego);
+    }
+
 }
